@@ -5,6 +5,9 @@ const monthName = months[now.getMonth()];
 
 document.getElementById("footer_copy").innerHTML= "&copy; " + year + " MONOMUSE. All rights reserved.";
 
+
+// this is the nav functionality 
+// ------part 6------
 function active_nav() {
     let NavLinks = document.querySelectorAll('nav li a');
     NavLinks.forEach(element => {
@@ -16,7 +19,8 @@ function active_nav() {
 active_nav();
 
 
-
+// this is the button interaction 
+// ------part 4------
 function selectDate(day) {
     var buy_form = document.getElementById("ticket-form");
     buy_form.style.display = "block";
@@ -100,8 +104,10 @@ function updateScheduleToCurrentMonth() {
     table.innerHTML = html;
 }
 
-// updateScheduleToCurrentMonth();
+updateScheduleToCurrentMonth();
 
+// this is the jquery
+// ------part 5------
 
 $(document).ready(function () {
     $(".read-more-btn").click(function (e) {
