@@ -137,3 +137,7 @@ p {
     justify-content: center;
     background-color: var(--gray);
 }
+
+.more-text {
+    display: none;
+  }

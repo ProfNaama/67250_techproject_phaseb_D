@@ -100,4 +100,19 @@ function updateScheduleToCurrentMonth() {
     table.innerHTML = html;
 }
 
-updateScheduleToCurrentMonth();
+// updateScheduleToCurrentMonth();
+
+
+$(document).ready(function () {
+    $(".read-more-btn").click(function (e) {
+      e.preventDefault();
+  
+      var moreText = $(".more-text");
+  
+      moreText.slideToggle();
+  
+      $(this).text(
+        moreText.is(":visible") ? "Read Less" : "Read More"
+      );
+    });
+  });
