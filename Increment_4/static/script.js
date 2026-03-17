@@ -6,6 +6,23 @@ const monthName = months[now.getMonth()];
 document.getElementById("footer_copy").innerHTML= "&copy; " + year + " MONOMUSE. All rights reserved.";
 
 
+// this is the jquery
+// ------part 5------
+
+$(document).ready(function () {
+    $(".read-more-btn").click(function (e) {
+      e.preventDefault();
+  
+      var moreText = $(".more-text");
+  
+      moreText.slideToggle();
+  
+      $(this).text(
+        moreText.is(":visible") ? "Read Less" : "Read More"
+      );
+    });
+  });
+
 // this is the nav functionality 
 // ------part 6------
 function active_nav() {
@@ -105,20 +122,3 @@ function updateScheduleToCurrentMonth() {
 }
 
 updateScheduleToCurrentMonth();
-
-// this is the jquery
-// ------part 5------
-
-$(document).ready(function () {
-    $(".read-more-btn").click(function (e) {
-      e.preventDefault();
-  
-      var moreText = $(".more-text");
-  
-      moreText.slideToggle();
-  
-      $(this).text(
-        moreText.is(":visible") ? "Read Less" : "Read More"
-      );
-    });
-  });
