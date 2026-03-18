@@ -6,7 +6,8 @@ const monthName = months[now.getMonth()];
 document.getElementById("footer_copy").innerHTML= "&copy; " + year + " MONOMUSE. All rights reserved.";
 
 
-// this is the jquery
+// this is jquery
+// selects the element p with class "read-more-content" adds a click that toggle between hide and show
 // ------part 5------
 
 $(document).ready(function () {
@@ -36,7 +37,7 @@ function active_nav() {
 active_nav();
 
 
-// this is the button interaction 
+// this is the button interaction - a much more complex function...
 // ------part 4------
 function selectDate(day) {
     var buy_form = document.getElementById("ticket-form");
@@ -121,4 +122,9 @@ function updateScheduleToCurrentMonth() {
     table.innerHTML = html;
 }
 
-updateScheduleToCurrentMonth();
+
+///make sure the function is called just on the ticket page ----
+
+if (window.location.href.includes("tickets.html")) {
+    updateScheduleToCurrentMonth();
+}

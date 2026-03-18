@@ -72,7 +72,7 @@ p {
 }
 
 
-
+/* 
 .container {
     display: grid;
     grid-template-areas: 
@@ -136,4 +136,4 @@ p {
     display: flex;
     justify-content: center;
     background-color: var(--gray);
-}
+} */
