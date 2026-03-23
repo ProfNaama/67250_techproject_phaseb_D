@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="../static/script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>MONOMUSE</h1>
+            <h1 class="title">ANSEL ADAMS</h1>
+        </header>
+        <nav class="nav_bar" id="navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./exhibitions.html">Exhibitions</a></li>
+                <li><a href="./visit.html">Visit info</a></li>
+                <li><a href="./tickets.html">Buy Tickets</a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="ResponsiveNavBar()">
+                    <i class="fa fa-bars"></i></a></li>
+            </ul>
+        </nav>
+        <main class="main_text">
+            <table class="schedule" id="scheduleTable">
+                <tr>
+                    <th colspan="7" id="schedule_title"></th>
+                </tr>
+                <tr>
+                    <th colspan="7">Select a date</th>
+                </tr>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="date" onclick="selectDate(1)">1</span></td>
+                    <td><span class="date" onclick="selectDate(2)">2</span></td>
+                    <td><span class="date" onclick="selectDate(3)">3</span></td>
+                    <td><span class="date" onclick="selectDate(4)">4</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="date" onclick="selectDate(5)">5</span></td>
+                    <td><span class="date" onclick="selectDate(6)">6</span></td>
+                    <td><span class="date" onclick="selectDate(7)">7</span></td>
+                    <td><span class="date" onclick="selectDate(8)">8</span></td>
+                    <td><span class="date" onclick="selectDate(9)">9</span></td>
+                    <td><span class="date" onclick="selectDate(10)">10</span></td>
+                    <td><span class="date" onclick="selectDate(11)">11</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="date" onclick="selectDate(12)">12</span></td>
+                    <td><span class="date" onclick="selectDate(13)">13</span></td>
+                    <td><span class="date" onclick="selectDate(14)">14</span></td>
+                    <td><span class="date" onclick="selectDate(15)">15</span></td>
+                    <td><span class="date" onclick="selectDate(16)">16</span></td>
+                    <td><span class="date" onclick="selectDate(17)">17</span></td>
+                    <td><span class="date" onclick="selectDate(18)">18</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="date" onclick="selectDate(19)">19</span></td>
+                    <td><span class="date" onclick="selectDate(20)">20</span></td>
+                    <td><span class="date" onclick="selectDate(21)">21</span></td>
+                    <td><span class="date" onclick="selectDate(22)">22</span></td>
+                    <td><span class="date" onclick="selectDate(23)">23</span></td>
+                    <td><span class="date" onclick="selectDate(24)">24</span></td>
+                    <td><span class="date" onclick="selectDate(25)">25</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="date" onclick="selectDate(26)">26</span></td>
+                    <td><span class="date" onclick="selectDate(27)">27</span></td>
+                    <td><span class="date" onclick="selectDate(28)">28</span></td>
+                    <td><span class="date" onclick="selectDate(29)">29</span></td>
+                    <td><span class="date" onclick="selectDate(30)">30</span></td>
+                    <td><span class="date" onclick="selectDate(31)">31</span></td>
+                    <td></td>
+                </tr>
+            </table>
+        </main>
+        <aside class="aside">
+            <table class="prices">
+                <th colspan="3">Ticket Prices</th>
+
+                <tr>
+                    <th>Age Group</th>
+                    <th>Members</th>
+                    <th>Non-Members</th>
+                </tr>
+                <tr>
+                    <td>Adults</td>
+                    <td>$12</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Teens</td>
+                    <td>$8</td>
+                    <td>$12</td>
+                </tr>
+                <tr>
+                    <td>Under 3</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>Senior</td>
+                    <td>$10</td>
+                    <td>$14</td>
+                </tr>
+            </table>
+        </aside>
+        <section class="section">
+            <div>
+                <form id="ticket-form">
+                    <label for="visitDate">Visit Date</label>
+                    <input type="date" id="visitDate" name="visitDate" required>
+                    <div class="row">
+                        <h4>Select Ticket Quantities</h4>
+
+
+                    </div>
+
+                    <div class="row">
+                        <label>Adults</label>
+                        <input type="number" name="adults" min="0" max="10" value="0">
+                    </div>
+
+                    <div class="row">
+                        <label>Teens</label>
+                        <input type="number" name="teens" min="0" max="10" value="0">
+                    </div>
+
+                    <div class="row">
+                        <label>Seniors</label>
+                        <input type="number" name="seniors" min="0" max="10" value="0">
+                    </div>
+                    <div class="row">
+                        <h4>Membership Status</h4>
+                    </div>
+                    <div class="row">
+                        <label>
+                            <input type="radio" name="membership" value="member" required>
+                            Member
+                        </label>
+
+                        <label>
+                            <input type="radio" name="membership" value="non-member">
+                            Non-Member
+                        </label>
+                    </div>
+                    <div class="row">
+                        <button onclick="checkout()" id="Checkout" type="button">Checkout</button>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+        <Footer class="footer">
+            <P id="footer_copy"></P>
+        </Footer>
+    </div>
+</body>
+
+</html>
