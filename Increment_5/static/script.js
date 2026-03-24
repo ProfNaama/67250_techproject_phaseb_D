@@ -141,3 +141,13 @@ function ResponsiveNavBar() {
         nav.className = "nav_bar";
     }
 }
+////letleaf map
+  // Create the map and set initial view (lat, lng, zoom)
+  const map = L.map('map').setView([40.4406, -79.9959], 13); // Pittsburgh
+
+  // Add tile layer (the actual map tiles)
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+
